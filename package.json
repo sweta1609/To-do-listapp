@@ -1,0 +1,20 @@
+{
+    "name": "todoapp",
+    "version": "1.0.0",
+    "description": "major project1",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "test ": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mytodoapp"
+    ],
+    "author": "sweta",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.1",
+        "mongoose": "^6.4.6"
+    }
+}

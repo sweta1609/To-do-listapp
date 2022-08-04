@@ -1,0 +1,253 @@
+body{
+    text-align: center;
+    background-color:rgb(52, 2, 2);
+    
+   
+}
+/* for all forms */
+form{
+    background-color:white;
+    border-radius: 10px;
+}
+
+.outer_div{
+    width:50%;
+    height:auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+/* upper part -consisting of description,category and date */
+#form1{
+    background-color:white;
+    height:50%;
+    border-radius: 10px;
+}
+
+
+h1{
+    font-family:cursive;
+    color:navy;
+}
+
+/* to do list section upper part  */
+#outer_div1{
+    background-color: lightgray;
+    border-radius: 2px;
+    height:40px;
+}
+
+/* description section */
+#description_box1{
+   
+    margin-top: -3%;
+}
+#description{
+   margin-left: -65% ;
+   margin-bottom: -1px;
+  
+} 
+
+/* description box textarea */
+.textarea1{
+    width:80%;
+    height:80px;
+    background-color: aliceblue;
+}
+
+
+#text{
+    margin-left:-65%;
+}
+
+/* 1st form 2nd half */
+.inner{
+    display:flex;
+
+}
+#inner2{
+    margin-left: 10%;
+}
+
+#inner1{
+    display:inline-block;
+    margin-left:2%;
+    margin-right:10%;
+    
+}
+
+#date-box{
+    margin-top: -20%;
+    margin-bottom: 2%;
+    margin-left: -80%;
+}
+
+#date-box input{
+    margin-left:-25%;
+}
+
+
+/* styling buttons delete and add task */
+button{
+    width:150px;
+    height: 30px;
+    border-radius: 10px;
+}
+/* task box with add button */
+#add_task_box{
+    background-color:lightgray;
+    height:40px;
+    border-radius: 2px;
+}
+
+#button1{
+    background-color:teal;
+    border: none;
+    cursor:pointer;
+    margin-top: 1%;
+}
+/* for making pointer for add button */
+#box{
+    cursor: pointer;
+}
+
+
+
+
+
+/* style and size of text */
+.textfamily{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    color:steelblue ;
+}
+/* below section where to do things are added */
+#main-todo{
+    display: flex;
+    background-color:rgb(252, 223, 237);
+    width:95%;
+   
+  
+}
+#todo1{
+    
+    margin-left:-15%;
+    width:50%;
+    height:80px;
+
+}
+
+#todo11{
+    width:auto;
+    height:auto;
+    background-color:rgb(250, 239, 239);
+    margin-left: 30%;
+    border: none;
+    outline: none;
+    margin-top: 5%;
+    border-radius:5px;
+    resize: none;
+}
+
+#todo111{
+    margin-top: 2%;
+}
+
+#todo2{
+    display:inline-block;
+    /* background-color:lightseagreen; */
+    width:20%;
+    height:50px;
+    margin-top:1%;
+    margin-left: 35%;
+    border-radius: 10px;
+   
+}
+
+#todo21{
+    width:100%;
+    height:50%;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+li{
+    list-style: none;
+}
+/* checkbo */
+.checkbox{
+    margin-top: 3%;
+   
+}
+/* delete button */
+#del-btn{
+    background-color:rgb(219, 136, 136);
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    cursor:pointer;
+   
+    
+}
+
+/* for tick mark in checkbox */
+ input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    background: white;
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+input[type="checkbox"]:checked {
+    background:rgba(73, 1, 1, 0.441); ;
+}
+input[type="checkbox"]:checked:after {
+    /* Heres your symbol replacement */
+    content: "✓";
+    color:white;
+    /* The following positions my tick in the center, 
+     * but you could just overlay the entire box
+     * with a full after element with a background if you want to */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+@media screen and (max-width:768px){
+    .outer_div{
+        width:90%;
+        margin-left:5%;
+    }
+
+    #inner2{
+        width:20%;
+    }
+    #inner1{
+        width:20%;
+        margin-right:5%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .outer_div{
+        width:70%;
+        margin-left:15%;
+    }
+
+    #inner2{
+        width:20%;
+    }
+    #inner1{
+        width:20%;
+        margin-right:5%;
+    }
+}
+
+

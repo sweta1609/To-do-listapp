@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/30da7cb109.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+
+    </head>
+    <body>
+      
+        <div class="outer_div">
+            <form action="/create-todoapp" method="post" id="form1">
+                <div id="outer_div1">        
+                    <h1>TO-DO List</h1>
+                </div>
+                <hr>
+                <hr>
+                <div id="description_box1">
+                    <h3  id="description" class="textfamily">Description:</h3>
+                    <input name="description"class="textarea1" placeholder="What do you need to do?">
+                    <hr>
+                    <hr>
+                </div>
+                <div class="inner">
+                    <div id="inner2">
+                        <label for="cate" id="text" class="textfamily" required>Category:
+                        <br>
+                        <input list="cate" name="category" placeholder="Choose a category"></label>
+                        <datalist id="cate">
+                             <option >Home</option>
+                             <option >Work</option>
+                             <option>School</option>
+                             <option>Chores</option>
+                             <option>Next Week</option>
+                        </datalist>
+                    </div>
+                    <hr>
+                    <div id="inner1">
+                        <div id="date-box">
+                            <h3 id="description" class="textfamily"> Due-Date:</h3>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="add_task_box">
+                    <button type="submit" id="button1" name="additem"><i class="fa-solid fa-circle-plus"></i>&emsp;Add Task</button>
+                </div>
+            </form>
+            <form method="POST" action="/delete-todolist">
+                <div class="text-center">
+                    <button type="submit"  id="del-btn"><i class="fa-solid fa-trash"></i>&emsp;Delete Task</button>
+                </div>
+                <div>
+                    <ul>
+                        <% for (let i of todoapp_list) { %>
+                        <div class ="todo">
+                            <li>
+                                <div id="main-todo">
+                                    <div class="checkbox">
+                                        <input id="box" type="checkbox"  name = "<%= i._id %>">
+                                    </div>
+                                    <div id="todo1">
+                                        <textarea id="todo11"><%=  i.description %></textarea>
+                                        <p id="todo111"><i class="fa-solid fa-calendar-days"></i>&ensp;<%=  i.date %></p>
+                                    </div>
+                                    <div id="todo2">
+                                        <p><% if(i.category=='Home'){
+                                            %><p  id="todo21" style="background-color: #DB7093;"><%= i.category %></p><%
+                                        }else if(i.category=='School'){
+                                            %><p id="todo21" style="background-color: #87CEEB;"><%= i.category %></p><% 
+                                        }else if(i.category =='Work'){
+                                            %><p  id="todo21"style="background-color:#FFB6C1;"><%= i.category %></p><%
+                                        }else if(i.category == 'Chores'){
+                                            %><p id="todo21" style="background-color:#BC8F8F;"><%= i.category %></p><%
+                                        }else if(i.category =='Next Week'){
+                                            %><p id="todo21" style="background-color:#DDA0DD;"><%= i.category %></p><%
+                                        } %></p>
+                                    </div>
+                                </div>  
+                            </li>
+                        </div>
+                        <hr>
+                       <% } %>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
